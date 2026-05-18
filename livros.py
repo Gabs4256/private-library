@@ -51,3 +51,23 @@ def atualizar_status(opcao):
     
     if not encontrado:
         print("Livro não encontrado, tente novamente.")
+
+## Mostrar fila de leitura
+def mostrar_fila():
+    print("\n=== FILA DE LEITURA ===")
+
+    if len(fila_leitura) == 0:
+        print("Nenhum livro na fila.")
+    else:
+        for livro in fila_leitura:
+            print(f"{livro['nome']} - {livro['status']}")
+
+## Mostrar pilha de livros concluídos
+def mostrar_pilha():
+    print("\n=== PILHA DE LIVROS CONCLUÍDOS ===")
+
+    if len(pilha_concluidos) == 0:
+        print("Nenhum livro concluído.")
+    else:
+        for livro in reversed(pilha_concluidos):
+            print(f"{livro['nome']} - {livro['status']}")
